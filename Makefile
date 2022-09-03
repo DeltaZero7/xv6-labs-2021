@@ -195,7 +195,10 @@ UPROGS=\
 	$U/_zombie\
 
 
-
+ifeq ($(LAB), util)
+UPROGS += \
+	$U/_sleep
+endif
 
 ifeq ($(LAB),$(filter $(LAB), pgtbl lock))
 UPROGS += \
